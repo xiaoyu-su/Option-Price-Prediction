@@ -15,37 +15,37 @@ We collect option price data using the yfinance Python library, which interfaces
 
 Here are the attributes we pulled from the raw data:
 
--contractSymbol: Unique identifier for the option contract
+- ContractSymbol: Unique identifier for the option contract
 
--lastTradeDate: Timestamp of the most recent trade
+- LastTradeDate: Timestamp of the most recent trade
 
--strike: Strike price of the option
+- Strike: Strike price of the option
 
--lastPrice: Most recent transaction price (market price)
+- LastPrice: Most recent transaction price (market price)
 
--bid: Highest price buyers are willing to pay
+- Bid: Highest price buyers are willing to pay
 
--ask: Lowest price sellers are willing to accept
+- Ask: Lowest price sellers are willing to accept
 
--change: Price change since previous close
+- Change: Price change since previous close
 
--percentChange: Percent price change since previous close
+- PercentChange: Percent price change since previous close
 
--volume: Number of contracts traded on the current day
+- Volume: Number of contracts traded on the current day
 
--openInterest: Total number of outstanding contracts
+- OpenInterest: Total number of outstanding contracts
 
--impliedVolatility: Market’s forecast of future volatility implied by option price
+- ImpliedVolatility: Market’s forecast of future volatility implied by option price
 
--inTheMoney: Boolean indicating if the option is currently profitable to exercise
+- InTheMoney: Boolean indicating if the option is currently profitable to exercise
 
--optionType: Type of option, either call or put
+- OptionType: Type of option, either call or put
 
--expirationDate: Date when the option expires
+- ExpirationDate: Date when the option expires
 
--ticker: Underlying stock symbol
+- Ticker: Underlying stock symbol
 
--Spot Price
+- Spot Price
 
 Our dataset covers multiple companies(Facebook(Meta), Apple, Amazon, Netflix, Google) and all available expiration dates, providing a comprehensive snapshot of the options market over time. This allows us to analyze real market prices alongside theoretical benchmarks like the Black-Scholes model.
 
