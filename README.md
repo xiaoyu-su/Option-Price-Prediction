@@ -63,7 +63,43 @@ In the belowed subsections, we outlined our strategy for building models, compar
 
 ### Interested features
 
-As mentioned in the introduction, we're interested in producing 
+Our project implements a comprehensive machine learning pipeline to predict option prices more accurately than the theoretical Black-Scholes (BS) benchmark. As mentioned in the introduction, the features of our interests are
+
+- Bs_price: The theoretical Black-Scholes price
+
+- ImpliedVolatility: The market’s expectation of future volatility
+
+- Log_moneyness: The logarithm of strike price relative to the spot price, a normalized measure of moneyness
+
+- Ask_bid_spread: A liquidity indicator calculated as the difference between ask and bid prices
+
+These features were selected for their financial relevance. On the powerset of these four features, we will perform the following modelings and analysis.
+
+The models included in our pipeline are:
+
+- BS-Model (baseline)
+
+- Multiple Linear Regression (MLR)
+
+- k-Nearest Neighbors (KNN)
+
+- Ridge and Lasso Regression
+
+- Bagging Regressor
+
+- Random Forest
+
+- XGBoost
+
+- Neural Network
+
+- Polynomial Regression Methods
+
+We use GridSearchCV to systematically tune hyperparameters for each model, ensuring optimal performance within a cross-validated framework. Model evaluation is primarily based on Mean Squared Error (MSE), allowing consistent grading of model accuracy across varying levels of complexity.
+
+Each model is trained using cleaned and filtered option price data, and we compare predictions against observed market prices (lastPrice), and grade the training using MSE. This modeling pipeline enables us to assess the ability of both linear and nonlinear methods to capture the deviations between theoretical and actual market behavior.
+
+
 
 
 
