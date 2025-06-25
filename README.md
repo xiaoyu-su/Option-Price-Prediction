@@ -59,7 +59,7 @@ In the data cleansing process, we first removed entries with missing values and 
 
 ## Modeling pipeline
 
-In the belowed subsections, we outlined our strategy for building models, comparing models, and determining 
+In the belowed subsections, we outlined our strategy for building models, comparing models, and determining the best modeling with respect to our scoring.
 
 ### Interested features
 
@@ -74,6 +74,8 @@ Our project implements a comprehensive machine learning pipeline to predict opti
 - Ask_bid_spread: A liquidity indicator calculated as the difference between ask and bid prices
 
 These features were selected for their financial relevance. On the powerset of these four features, we will perform the following modelings and analysis.
+
+### Analysis and Scoring
 
 The models included in our pipeline are:
 
@@ -98,6 +100,11 @@ The models included in our pipeline are:
 We use GridSearchCV to systematically tune hyperparameters for each model, ensuring optimal performance within a cross-validated framework. Model evaluation is primarily based on Mean Squared Error (MSE), allowing consistent grading of model accuracy across varying levels of complexity.
 
 Each model is trained using cleaned and filtered option price data, and we compare predictions against observed market prices (lastPrice), and grade the training using MSE. This modeling pipeline enables us to assess the ability of both linear and nonlinear methods to capture the deviations between theoretical and actual market behavior.
+
+###Visualizations
+After the analysis is performed for each firm, we will generate a scatter plot of the best model's predicted price against lastPrice. The closer our data is to the y=x line implies that it offers a better prediction towards the market's price. 
+
+We also generate an aggregate bar chart for all companies. It shows the mean squared error (MSE) between the predicted option prices from each model and the observed lastPrice. Note that the MSEs in the bar chart are not the actual values — we applied a scaling factor to make the Black-Scholes model's price the same across all companies and scaled the predictions from all other models by the same factor. This allows for a more intuitive visual comparison of the relative improvement each model achieves, as reflected by the reduction in bar height.
 
 
 
