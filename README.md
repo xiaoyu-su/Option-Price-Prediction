@@ -101,7 +101,7 @@ We use GridSearchCV to systematically tune hyperparameters for each model, ensur
 
 Each model is trained using cleaned and filtered option price data, and we compare predictions against observed market prices (lastPrice), and grade the training using MSE. This modeling pipeline enables us to assess the ability of both linear and nonlinear methods to capture the deviations between theoretical and actual market behavior.
 
-###Visualizations
+### Visualizations
 After the analysis is performed for each firm, we will generate a scatter plot of the best model's predicted price against lastPrice. The closer our data is to the y=x line implies that it offers a better prediction towards the market's price. 
 
 We also generate an aggregate bar chart for all companies. It shows the mean squared error (MSE) between the predicted option prices from each model and the observed lastPrice. Note that the MSEs in the bar chart are not the actual values — we applied a scaling factor to make the Black-Scholes model's price the same across all companies and scaled the predictions from all other models by the same factor. This allows for a more intuitive visual comparison of the relative improvement each model achieves, as reflected by the reduction in bar height.
