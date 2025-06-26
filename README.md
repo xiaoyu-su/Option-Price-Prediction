@@ -67,8 +67,8 @@ Our project implements a comprehensive machine learning pipeline to predict opti
 
 - Bs_price: The theoretical Black-Scholes price
 
-- ImpliedVolatility: The market’s expectation of future volatility
-
+- Time to Maturity: The time before the option expires
+  
 - Log_moneyness: The logarithm of strike price relative to the spot price, a normalized measure of moneyness
 
 - Ask_bid_spread: A liquidity indicator calculated as the difference between ask and bid prices
