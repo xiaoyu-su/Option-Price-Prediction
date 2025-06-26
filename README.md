@@ -10,6 +10,8 @@ This project aims to build an improved predictive model that captures those comp
 ### Data Source
 Our data comes from Yahoo Finance Data sets. Description of the data can be found below
 
+The data file will be downloaded to /Data Collection/Faang Data after running Download_FANNG_Data.ipynb.
+
 ### Option Data Description
 We collect option price data using the yfinance Python library, which interfaces with Yahoo Finance’s publicly available API. For each company and option expiration date, we download detailed information on both call and put options, including strike prices, last traded prices, bid-ask quotes, volume, open interest, implied volatility, and moneyness indicators. Most of the data are critical for computing the Black-Scholes Model price, while the rest are used in the features used for the models.
 
@@ -57,9 +59,13 @@ This dataset serves as the foundation for building predictive models that aim to
 
 In the data cleansing process, we first removed entries with missing values and ensured that all numerical fields (e.g., prices, volume) were positive as a basic sanity check. We then standardized units for consistency and ease of use. To improve data quality, we applied several filters: we kept only options with moneyness between 0.8 and 1.2, bid-ask spread less than 50% of the mid-price, and more than one day remaining until expiration. These steps help ensure that the dataset reflects liquid, relevant options with reliable pricing signals.
 
+The cleansing will be performed by running Data_cleansing and processing.ipynb.
+
 ## Modeling pipeline
 
 In the belowed subsections, we outlined our strategy for building models, comparing models, and determining the best modeling with respect to our scoring.
+
+All the modeling details and results can be found in With_resultJun25th_Identifying_Best_Option_Price_Model_For_Each_Firm.ipynb
 
 ### Interested features
 
