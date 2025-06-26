@@ -71,7 +71,7 @@ All the modeling details and results can be found in With_resultJun25th_Identify
 
 Our project implements a comprehensive machine learning pipeline to predict option prices more accurately than the theoretical Black-Scholes (BS) benchmark. As mentioned in the introduction, the features of our interests are
 
-- Bs_price: The theoretical Black-Scholes price
+- Bs_price: The theoretical Black-Scholes price calculated by using historical volatility, not implied volatility, to avoid data leakage.
 
 - Time to Maturity: The time before the option expires
   
