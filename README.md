@@ -103,7 +103,7 @@ The models included in our pipeline are:
 
 - Polynomial Regression Methods
 
-We use GridSearchCV to systematically tune hyperparameters for each model, ensuring optimal performance within a cross-validated framework. Model evaluation is primarily based on Mean Squared Error (MSE), allowing consistent grading of model accuracy across varying levels of complexity.
+We use GridSearchCV (with GroupKFold such that train-test sets are split by groups of same expiration dates) to systematically tune hyperparameters for each model, ensuring optimal performance within a cross-validated framework. Model evaluation is primarily based on Mean Squared Error (MSE), allowing consistent grading of model accuracy across varying levels of complexity.
 
 Each model is trained using cleaned and filtered option price data, and we compare predictions against observed market prices (lastPrice), and grade the training using MSE. This modeling pipeline enables us to assess the ability of both linear and nonlinear methods to capture the deviations between theoretical and actual market behavior.
 
